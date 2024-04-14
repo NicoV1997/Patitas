@@ -1,0 +1,736 @@
+* body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    /* color: white; */
+    text-align: center;
+}
+
+/* --------------------------Main----------------------------------- */
+
+/* --- imagen ---  */
+.contenedor_mobile {
+    margin: 12px auto;
+    display: block;
+    width: 90%;
+}
+
+.contenedor_imagen_mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 0px auto;
+}
+
+.imagen_producto_mobile {
+    width: 80%;
+}
+
+.ruta {
+    opacity: 0;
+    color: rgb(86, 86, 86);
+}
+
+.ruta:hover {
+    color: black;
+}
+
+.ruta-barras {
+    opacity: 0;
+}
+
+/* --- detalles de producto ---  */
+.detalle {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.titulo_nombre-detalle {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.precio-normal {
+    display: none;
+}
+
+.precio-oferta {
+    display: none;
+}
+
+.precio-tachado-detalle {
+    color: rgb(56, 56, 56);
+    font-weight: 300;
+    text-decoration: line-through;
+    font-size: 18px; 
+}
+
+.precio-detalle {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.descuento-detalle {
+    color: #24768b;
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 15px;
+    font-style: oblique;
+}
+
+.descuento-precio {
+    color: #1e697b;
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+.titulo_descripción {
+    text-decoration: underline;
+    text-decoration-color: rgb(156, 156, 156);
+    font-size: 18px;
+    color: rgb(86, 86, 86);
+}
+
+.div-dos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid white;
+    justify-content: flex-start;
+    height: 40px;
+}
+
+.div-tres {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid white;
+    justify-content: flex-start;
+    height: 70px;
+}
+
+.etiqueta-comida-bicho, .etiqueta-accesorio-bicho, .etiqueta-higiene-bicho, .etiqueta-juguete-bicho {
+    font-weight: 500;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 6px;
+    width: 25%;
+    text-align: center;
+}
+
+.etiqueta-comida-bicho {
+    color: #5746d7;
+    border: 1px solid #5746d7;
+}
+
+.etiqueta-accesorio-bicho {
+    color: #29d5de;
+    border: 1px solid #29d5de;
+}
+
+.etiqueta-higiene-bicho {
+    color: #e8a62b;
+    border: 1px solid #e8a62b;
+}
+
+.etiqueta-juguete-bicho {
+    color: #9b46d7;
+    border: 1px solid #9b46d7;
+}
+
+.descuento-precio {
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid #349fba;
+    border-radius: 6px;
+    margin-left: 15px;
+    background-color: #349fba;
+}
+
+/* --- Botones ---  */
+
+.botones-admin {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+.boton_agregar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1e697b;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 10px;
+    background-color: #d4ebf1;
+    border-radius: 8px;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 350ms;
+    border: 1px solid #c6e0e7;
+}   
+
+.boton_comprar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 10px;
+    background-color: #1e697b;
+    border-radius: 8px;
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 350ms;
+    border: 1px solid black;
+}  
+
+.boton_editar{
+    color: rgb(77, 77, 77);
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px;
+    background-color: rgb(255, 255, 128);
+    border-radius: 8px;
+    /* width: 50%; */
+    margin: auto;
+    margin-top: 10px;
+    /* margin-bottom: 10px; */
+    text-align: center;
+    cursor: pointer;
+    transition: 350ms;
+    border: 1px solid rgb(199, 199, 51);
+} 
+
+.boton_eliminar{
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #ff5555;
+    border-radius: 8px;
+    /* width: 40%; */
+    margin: auto;
+    margin-top: 10px;
+    /* margin-bottom: 15px; */
+    text-align: center;
+    cursor: pointer;
+    transition: 350ms;
+    border: 1px solid rgb(193, 0, 0);
+} 
+
+.boton_agregar:hover{
+    background-color: #c9dbe0;
+}
+
+.boton_comprar:hover{
+    background-color: #349fba;
+}
+
+.boton_editar:hover{
+    background-color: yellow;
+}
+
+.boton_eliminar:hover{
+    background-color: #ff0000;
+}
+
+.texto_boton {
+    font-size: 13px;
+}
+
+.linea {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* form {
+    width: 90%;
+} */
+
+/* --- Reel productos ---  */
+/* seccion producto */
+.section-productos-descuentos {
+    width: 90%;
+    margin: auto;
+    padding-top: 3%;
+    margin-top: -15px;
+}
+
+.titulo-section-productos-descuentos { /* titulo "Productos relacionados" */
+    margin-bottom: 10px;
+}
+
+.div-section-productos-descuentos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* card producto */
+.articulo-productos-descuentos {
+    width: 80%;
+    height: auto;
+    border: 1px solid rgb(129, 129, 129);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contenedor_imagen {
+    padding-top: 12px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: white;
+    height: 140px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.div-card {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.img-productos-descuentos {
+    margin: auto;
+    width: auto;
+}
+
+.contenedor_imagen .img-productos-descuentos {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto_nombre_arriba {
+    max-height: 38px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.texto_descripcion_arriba {
+    max-height: 38px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.precio-d {
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    width: 30%;
+    font-size: 16px;
+}
+
+.precio {
+    font-weight: 600;
+    width: 30%;
+    font-size: 16px;
+}
+
+.precio-tachado {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: line-through;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.descuento {
+    padding: 0;
+    margin: 0;
+    margin-top: -10px;
+    color: #24768b;
+    font-weight: 500;
+    font-size: 14px;
+    width: 60%;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.div-precios {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: end;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.div-boton-comprar {
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.boton-comprar {
+    text-align: center;
+    background-color: #1e697b;
+    color: white;
+    width: 100%;
+    height: 40%;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.etiqueta-comida-bicho-card, .etiqueta-accesorio-bicho-card, .etiqueta-higiene-bicho-card, .etiqueta-juguete-bicho-card {
+    font-weight: 500;
+    font-size: 11px;
+    padding: 4px;
+    border-radius: 5px;
+    width: 70%;
+    text-align: center;
+    margin: 0;
+}
+
+.etiqueta-comida-bicho-card {
+    color: #5746d7;
+    border: 1px solid #5746d7;
+}
+
+.etiqueta-accesorio-bicho-card {
+    color: #29d5de;
+    border: 1px solid #29d5de;
+}
+
+.etiqueta-higiene-bicho-card {
+    color: #e8a62b;
+    border: 1px solid #e8a62b;
+}
+
+.etiqueta-juguete-bicho-card {
+    color: #9b46d7;
+    border: 1px solid #9b46d7;
+}
+
+/* hasta aca card producto */
+
+footer {
+    margin-top: 15px;
+}
+
+
+@media (min-width: 768px) {
+
+    .titulo_nombre-detalle {
+        font-size: 28px;
+    }
+
+    .precio-tachado-detalle {
+        font-size: 20px; 
+    }
+
+    .descuento-detalle {
+        font-size: 18px;
+    }
+
+    .descuento-precio {
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    /* seccion productos */
+    .section-productos-descuentos {
+        margin-top: -30px;
+    }
+
+    .div-section-productos-descuentos {
+        justify-content: space-between;
+    }
+
+    .etiqueta-comida-bicho, .etiqueta-accesorio-bicho, .etiqueta-higiene-bicho, .etiqueta-juguete-bicho {
+        font-size: 12px;
+        width: 13%;
+    }
+    
+    .titulo-section-productos-descuentos { /* titulo "Productos relacionados" */
+        margin-bottom: 10px;
+    }
+    
+    /* card producto */
+    .articulo-productos-descuentos {
+        width: 80%;
+    }
+
+    .etiqueta-comida-bicho-card, .etiqueta-accesorio-bicho-card, .etiqueta-higiene-bicho-card, .etiqueta-juguete-bicho-card {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 993px){
+
+    /* card producto */
+    .articulo-productos-descuentos {
+        width: 85%;
+        height: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .ruta {
+        opacity: 1;
+    }
+
+    .ruta-barras {
+        opacity: 1;
+    }
+
+    .contenedor_imagen_mobile {
+        width: 30%;
+    }
+    
+    .boton_agregar {
+        width: 100%;
+    }  
+    
+    .boton_comprar {
+        width: 100%;
+    } 
+    
+    .boton_editar {
+        width: 100%;
+    } 
+    
+    .boton_eliminar {
+        width: 100%;
+    } 
+    
+    .titulo_nombre-detalle {
+        font-weight: 500;
+        font-size: 24px;
+    }
+
+    .precio-normal {
+        display: block;
+        color: rgb(56, 56, 56);
+        font-weight: 300;
+        font-size: 16px; 
+    }
+
+    .precio-oferta {
+        display: block;
+        font-weight: 400;
+        font-size: 22px; 
+        margin-right: 15px;
+    }
+    
+    .precio-tachado-detalle {
+        font-weight: 300;
+        font-size: 18px; 
+        margin-left: 15px;
+    }
+    
+    .precio-detalle {
+        font-size: 24px;
+        font-weight: 500;
+    }
+    
+    .descuento-detalle {
+        font-weight: 400;
+        font-size: 16px;
+        margin-left: 15px;
+    }
+
+    .etiqueta-comida-bicho, .etiqueta-accesorio-bicho, .etiqueta-higiene-bicho, .etiqueta-juguete-bicho {
+        color: white;
+        font-size: 14px;
+        width: 10%;
+    }
+
+    .etiqueta-comida-bicho {
+        border: 1px solid #5746d7;
+        background-color: #5746d7;
+    }
+
+    .etiqueta-accesorio-bicho {
+        border: 1px solid #29d5de;
+        background-color: #29d5de;
+    }
+
+    .etiqueta-higiene-bicho {
+        border: 1px solid #e8a62b;
+        background-color: #e8a62b;
+    }
+
+    .etiqueta-juguete-bicho {
+        border: 1px solid #9b46d7;
+        background-color: #9b46d7;
+    }
+    
+    .descuento-precio {
+        color: white;
+        font-weight: 500;
+        font-size: 14px;
+        padding: 5px;
+        border: 1px solid #349fba;
+        border-radius: 6px;
+        margin-left: 15px;
+        background-color: #349fba;
+    }
+    
+    .titulo_descripción {
+        font-size: 22px;
+    }
+    
+    .descripcion-detalle {
+        font-size: 18px;
+    }
+
+    /* card producto */
+    .articulo-productos-descuentos {
+        width: 85%;
+        transition: 450ms;
+    }
+    
+    .articulo-productos-descuentos:hover {
+        box-shadow : 0px 0px 20px rgb(140, 140, 140);
+    }
+    
+    button {
+        cursor: pointer;
+    }
+    
+    .boton-comprar {
+        transition: 450ms;
+    }
+    
+    .boton-comprar:hover {
+        background-color: #349fba;
+    }
+    
+    h4 { /* producto.nombre */
+        font-size: 14px;
+    }
+    
+    .descripcion {
+        font-size: 12px;
+    }
+
+    .etiqueta-comida-bicho-card, .etiqueta-accesorio-bicho-card, .etiqueta-higiene-bicho-card, .etiqueta-juguete-bicho-card {
+        font-size: 10.5px;
+        padding: 4px;
+    }
+    
+    .etiqueta-comida-bicho-card {
+        color: white;
+        border: 1px solid #5746d7;
+        background-color: #5746d7;
+    }
+    
+    .etiqueta-accesorio-bicho-card {
+        color: white;
+        border: 1px solid #29d5de;
+        background-color: #29d5de;
+    }
+    
+    .etiqueta-higiene-bicho-card {
+        color: white;
+        border: 1px solid #e8a62b;
+        background-color: #e8a62b;
+    }
+    
+    .etiqueta-juguete-bicho-card {
+        color: white;
+        border: 1px solid #9b46d7;
+        background-color: #9b46d7;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .contenedor_mobile {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .titulo_nombre-detalle {
+        font-size: 26px;
+    }
+
+    /* seccion productos */
+    .section-productos-descuentos {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .articulo-productos-descuentos {
+        width: 80%;
+    }
+    
+    .titulo-section-productos-descuentos { /* titulo "Productos relacionados" */
+        margin-top: -10px;
+        margin-bottom: 15px;
+    }
+    
+    button {
+        cursor: pointer;
+    }
+
+    .etiqueta-comida-bicho, .etiqueta-accesorio-bicho, .etiqueta-higiene-bicho, .etiqueta-juguete-bicho {
+        font-size: 15px;
+        width: 11%;
+    }
+
+    /* card producto */
+    h4 { /* producto.nombre */
+        font-size: 16px;
+    }
+    
+    .descripcion {
+        font-size: 14px;
+    }
+    
+    .texto_nombre_arriba {
+        max-height: 40px; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+    
+    .texto_descripcion_arriba {
+        max-height: 50px; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+
+    .etiqueta-comida-bicho-card, .etiqueta-accesorio-bicho-card, .etiqueta-higiene-bicho-card, .etiqueta-juguete-bicho-card {
+        font-size: 12px;
+        padding: 5px;
+    }
+}

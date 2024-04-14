@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs", {cssSheet: "index_styles", title: "Home - PATITAS"}) %>
+<body>
+
+    <%- include("./partials/header.ejs") %>
+
+    <%- include("./partials/header2.ejs") %>
+
+    <main>
+        <section class="section-carrusel">
+            
+            <img class="img-carrusel1" src="\img\Imagen_carrusel.png" alt="Imagen_carrusel">
+            
+        </section>
+
+        <section class="section-servicios">
+            <div class="div-section-servicios">
+                <article class="articulo-servicio">
+                    <img class="img-servicio" src="\img\Imagen_home1.jpg" alt="Imagen_home1">
+                    <div class="descripcion-servicio">
+                        <h3>Alta calidad, precios bajos</h3>
+                        <p>Mantén a tu mascota feliz y saludable con excelentes precios en los mejores productos</p>
+                    </div>
+                </article>
+
+                <article class="articulo-servicio">
+                    <img class="img-servicio" src="\img\Imagen_home2.jpg" alt="Imagen_home2">
+                    <div class="descripcion-servicio">
+                        <h3>Devoluciones sin problemas</h3>
+                        <p>Tu mascota no tiene que esperar. Reciba todo directamente en su puerta con una entrega rápida de 1 a 3 días</p>
+                    </div>
+                </article>
+
+                <article class="articulo-servicio">
+                    <img class="img-servicio" src="\img\Imagen_home3.jpg" alt="Imagen_home3">
+                    <div class="descripcion-servicio">
+                        <h3>Soporte 24hs al día</h3>
+                        <p>Tienes preguntas? Estamos las 24hs, los 7 días de la semana. Nuestros expertos están a solo una llamada, un correo electrónico o a un chat de distancia</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-filtro-perro-gato">
+            <div class="div-section-filtro-perro-gato">
+                <article class="articulo-filtro-perro-gato">
+                    <a href="/productos/perro">
+                        <img class="img-boton-izq" src="\img\Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.bmp" alt="perro_boton">
+                        <div class="div-h1-perro">
+                            <h1 class="h1-1ra-linea">Comprar</h1>
+                            <h1 class="h1-2da-linea">para perro</h1>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="articulo-filtro-perro-gato">
+                    <a href="/productos/gato">
+                        <img class="img-boton-der" src="\img\gatito-regalos-para-gatos-1613566520.bmp" alt="gato_boton">
+                        <div class="div-h1-gato">
+                            <h1 class="h1-1ra-linea">Comprar</h1>
+                            <h1 class="h1-2da-linea">para gato</h1>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            
+        </section>
+
+       <!--- Seccion productos en javascript para el front podremos limitar la cantidad de caracteres-->
+        <section class="section-productos-descuentos">
+            <h2>Prueba productos</h2>
+            <div class="div-section-productos-descuentos">
+                <% for( let accesorio of productosPerroConDescuento) { %>
+                    <article class="articulo-productos-descuentos">
+                        <a href="">
+                            <div class="contenedor_imagen">
+                                <img class="img-productos-descuentos" src="/img/productos/<%= accesorio.image %>" alt="imagen_producto">
+                            </div>
+                        </a>
+                        <div>
+                            <div class="texto_nombre_arriba"> <!--- Limita la altura del box-->
+                                <h4><%= accesorio.name %></h4>
+                            </div>
+                            
+                            <div class="texto_descripcion_arriba">
+                                <p class="descripcion"><%= accesorio.description %></p>
+                            </div>
+                            <p class="precio-tachado">$ <%= accesorio.price %></p>
+                            <p class="descuento">20% off</p>
+                            <p class="precio"><%= Number((accesorio.price*0.8).toFixed(2)) %></p>
+                            <div class="div-boton-comprar">
+                                <button class="boton-comprar" type="submit">Agregar</button>
+                            </div>
+                        </div>
+
+                    </article>
+                    <% } %> 
+            </div>
+        </section>
+
+
+
+
+        <section class="section-productos-descuentos">
+            <h2>Productos con descuentos</h2>
+            <div class="div-section-productos-descuentos">
+                <% for(let accesorio of productosPerroConDescuento) { %>
+
+                    <article class="articulo-productos-descuentos">
+                        <a href="/productos/detalle">
+                            <div class="contenedor_imagen">
+                                <img class="img-productos-descuentos" src="/img/productos/<%= accesorio.image %>" alt="imagen_producto">
+                            </div>
+                        </a>
+                        <div class="descripcion-productos-descuentos">
+                            <h4><%= accesorio.name %></h4>
+                            <p class="descripcion"><%= accesorio.description %></p>
+                            <p class="precio-tachado">$ <%= accesorio.price %></p>
+                            <p class="descuento">20% off</p>
+                            <p class="precio"><%= Number((accesorio.price*0.8).toFixed(2)) %></p>
+                            <div class="div-boton-comprar">
+                                <button class="boton-comprar" type="submit">Agregar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                <% } %>
+
+            </div>
+        </section>
+
+        <section class="section-banner">
+            <div class="div-banner">
+                <img class="img-banner" src="\img\img-banner.jpg" alt="banner">
+                <h2 class="h2-banner-1ra-linea">En PATITAS encontrás todo lo que</h2>
+                <h2 class="h2-banner-2da-linea">tu mascota necesita</h2>
+            </div>
+        </section>
+
+        <section class="section-productos-perro">
+            <h2 class="h2-productos">Productos para perro</h2>
+            <div class="div-productos-perro">
+                <% for(let accesorio of productosPerroAccesorios) { %>  
+
+                <article class="articulo-productos-perro">
+                    <a href="/productos/detalle"><img class="img-productos-perro" src="/img/productos/<%= accesorio.image %>" alt="imagen_producto"></a>
+                    <div class="descripcion-productos-perro">
+                        <h4><%= accesorio.name %></h4>
+                        <p class="descripcion"><%= accesorio.description %></p>
+                        <% if (accesorio.discount=="Si") { %>
+                            <p class="precio-tachado">$ <%= accesorio.price %></p>
+                            <p class="descuento">20% off</p>
+                            <p class="precio"><%= Number((accesorio.price*0.8).toFixed(2)) %></p>
+                        <% } else { %>
+                            <p class="precio">$ <%= accesorio.price %></p>
+                        <% } %>
+                        <div class="div-boton-comprar">
+                            <button class="boton-comprar" type="submit">Agregar</button>
+                        </div>
+                    </div>
+                </article>
+
+            <% } %>
+                
+            </div>
+        </section>
+
+        <section class="section-productos-perro">
+            <h2 class="h2-productos">Productos para gato</h2>
+            <div class="div-productos-perro">
+
+                <% for(let accesorio of productosGatoAccesorios) { %>
+
+                    <article class="articulo-productos-perro">
+                        <a href="/productos/detalle"><img class="img-productos-perro" src="/img/productos/<%= accesorio.image %>" alt="imagen_producto"></a>
+                        <div class="descripcion-productos-perro">
+                            <h4><%= accesorio.name %></h4>
+                            <p class="descripcion"><%= accesorio.description %></p>
+                            <% if (accesorio.discount=="Si") { %>
+                                <p class="precio-tachado">$ <%= accesorio.price %></p>
+                                <p class="descuento">20% off</p>
+                                <p class="precio"><%= Number((accesorio.price*0.8).toFixed(2)) %></p>
+                            <% } else { %>
+                                <p class="precio">$ <%= accesorio.price %></p>
+                            <% } %>
+                            <div class="div-boton-comprar">
+                                <button class="boton-comprar" type="submit">Agregar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                <% } %>
+
+            </div>
+        </section>
+    </main>
+
+    <%- include("./partials/footer.ejs") %>
+
+
+
+    
+</body>
+</html>

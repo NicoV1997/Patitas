@@ -1,0 +1,62 @@
+
+
+<header class="top">
+    <div class="flex-top">
+        <a href="/">
+            <div class="logo-titulo-jun">
+                <img src="/img/header/LogoHeadBF2.png" alt="logo-titulo">
+            </div>
+        </a>
+       <!-- <div class="logo-titulo-sep"> -->
+           
+                <a href="/">
+                    <img src="/img/header/logoB.png" alt="logoB" class="logo"> 
+                    <p class="titulo-head">PATITAS</p>
+                </a>
+            
+       <!-- </div> -->
+       <form action="" method="POST">
+       <div class="barra-busqueda">
+           <div class="barra">
+               <input type="search" placeholder="Buscar producto ">
+               <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+            </div>
+           </div>
+       </form>
+       <div class="opciones-top">
+
+            <% if(usuario && usuario.category == "Administrador"){ %>
+                <div class="crear-producto">
+                    <a href="/productos/alta">
+                    <i class="fa-solid fa-plus" style="color: #ffffff;"></i>
+                    <p>Crear Producto</p>
+                    </a>
+                </div>
+            <% } %>
+
+           <div class="mis-compras">
+               <a href="/users/login">
+                <i class="fa-solid fa-lock" style="color: #ffffff;"></i>
+               <p>Mis compras</p>
+                </a>
+            </div>
+            <div class="mi-cuenta">
+                    <i class="fa-solid fa-circle-user" style="color: #ffffff;"></i>
+                    <% if(usuario){ %>
+                        <a href="/users/edit/<%= usuario.id %>"><p style="color: #FECF53; font-size: 16px;"><%= usuario.nombre %></p></a>
+                    <% } else { %>
+                        <a href="/users/login"><p >Mi cuenta</p></a>
+                    <% } %>
+               </div>
+           <div class="carrito">
+               <a href="/users/carrito2">  
+                <div class="logo-carrito-tablet"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></div>
+                <div class="logo-carrito-mobile"><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #ffffff;"></i></div>
+                <p class="carrito-text">Carrito</p>
+                </a>
+               </div>
+           </div>
+           <div class="menu-top">
+               <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i>
+           </div>
+</header>

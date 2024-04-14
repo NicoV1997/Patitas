@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs", {cssSheet: "registerLogin_style", title: "Página Login"}) %>
+    <link rel="stylesheet" href="/css/header-footer.css">
+<body>
+    
+    <%- include("./partials/header.ejs") %>
+    
+    <%- include("./partials/header2.ejs") %>
+
+    <main>
+        <article class="contenedor">
+            <!--Imagen hardcodeada-->
+            <img src="/img/Imagen_login.png" alt="Imagen de perro y gato" class="tamano-imagen">
+            <!--Registro-->
+            <form action="/users/login" method="POST" class="formulario">
+                <div class="centrado">
+                    <!--Logo + texto-->
+                    <article class="flex-enlinea">
+                        <!-- <img src="/img/header/logoV.png" alt="Logo" class="logo"> -->
+                        <h2> Bienvenido/a a Patitas</h2>
+                    </article>
+
+                    <div>
+                        <% if(locals.errorsCredencialesInvalidas){ %> 
+        
+                            <% for(let error in errorsCredencialesInvalidas) { %>
+                                <p style="color: red; font-size: 16px; font-weight: 500;" > <%= errorsCredencialesInvalidas[error].msg %> </p> 
+                            <% } %>
+                            
+                        <% } %>
+                    </div>
+
+                    <!--Input email-->
+                    <p class="<%= (locals.errors && locals.errors.email) ? 'titulo-error' : 'titulo' %>">Email</p>
+                    <input type="email" name="email" id="email" placeholder="" class="<%= (locals.errors && locals.errors.email) ? 'input_error' : '' %>" value="<%= locals.oldData ? oldData.email : null %>">
+                    <div style="margin-top: 10px;"><label for="email" class="errorEmail" style="color: red; font-size: 16px;"></label></div>
+                    <% if (locals.errors && locals.errors.email) { %>
+                        <label class="error"><i style="color: red; font-size: 16px; margin-right: 5px; margin-left: 5px;" class="fa-sharp fa-solid fa-circle-exclamation"></i><%= errors.email.msg %></label>
+                    <% } %>
+
+                    <!--Input contraseña-->
+                    <p class="<%= (locals.errors && locals.errors.email) ? 'titulo-error' : 'titulo' %>">Contraseña</p>
+                    <input type="password" name="password" id="password" placeholder="" class="<%= (locals.errors && locals.errors.password) ? 'input_error' : '' %>">
+                    <div style="margin-top: 10px;"><label for="password" class="errorPassword" style="color: red; font-size: 16px;"></label></div>
+                    <% if (locals.errors && locals.errors.password) { %>
+                        <label class="error"><i style="color: red; font-size: 16px; margin-right: 5px; margin-left: 5px;" class="fa-sharp fa-solid fa-circle-exclamation"></i><%= errors.password.msg %></label>
+                    <% } %>
+
+                    <!--Recuerdame -->
+                    <section class="flex-enlinea2">
+                        <input type="checkbox" name="recordarme" id="recordarme">
+                        <label for="recordarme" class="">Recordarme</label>
+                    </section>
+
+                    <a href="">¿Olvidaste la contraseña?</a>
+
+                    <button id="btnSubmit" type="submit">Iniciar sesión</button>
+
+                    <hr>
+                    <p class="semibold">¿No tenes cuenta?</p>
+                    <a href="/users/register">
+                        <button type="button" class="btn-secundario">Crear cuenta</button>
+                    </a>
+                </div>
+            </form>
+        </article>
+
+    </main> 
+
+    <%- include("./partials/footer.ejs") %>
+    
+    <script src="/js/validacionlogin.js"></script>
+
+</body>
+</html>
